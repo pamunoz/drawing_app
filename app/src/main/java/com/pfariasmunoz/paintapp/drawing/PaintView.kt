@@ -1,14 +1,8 @@
 package com.pfariasmunoz.paintapp.drawing
 
+import android.content.ContentResolver
 import android.content.Context
-import android.graphics.Bitmap
-import android.graphics.BlurMaskFilter
-import android.graphics.Canvas
-import android.graphics.Color
-import android.graphics.EmbossMaskFilter
-import android.graphics.MaskFilter
-import android.graphics.Paint
-import android.graphics.Path
+import android.graphics.*
 import android.util.AttributeSet
 import android.util.DisplayMetrics
 import android.view.MotionEvent
@@ -20,7 +14,7 @@ class PaintView @JvmOverloads constructor(context: Context, attrs: AttributeSet?
 
     companion object {
         var BRUSH_SIZE = 20
-        val DEFAULT_COLOR = Color.RED
+        val DEFAULT_COLOR = Color.BLACK
         val DEFAULT_BG_COLOR = Color.WHITE
         private val TOUCH_TOLERANCE = 4f
     }
@@ -40,8 +34,11 @@ class PaintView @JvmOverloads constructor(context: Context, attrs: AttributeSet?
     private var mBitmap: Bitmap? = null
     private var mCanvas: Canvas? = null
     private val mBitmapPaint = Paint(Paint.DITHER_FLAG)
+    private val contentResolver: ContentResolver
 
     init {
+
+        contentResolver = context.contentResolver
         mPaint = Paint().apply {
             isAntiAlias = true
             isDither = true
@@ -159,6 +156,5 @@ class PaintView @JvmOverloads constructor(context: Context, attrs: AttributeSet?
 
         return true
     }
-
 
 }
