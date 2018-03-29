@@ -1,23 +1,20 @@
-package com.pfariasmunoz.paintapp
+package com.pfariasmunoz.paintapp.drawing
 
 import android.os.Bundle
-import android.provider.MediaStore
 import android.support.v7.app.AppCompatActivity
 import android.util.DisplayMetrics
 import android.view.MenuItem
+import com.pfariasmunoz.paintapp.R
 import com.pfariasmunoz.paintapp.extensions.savePng
 import com.pfariasmunoz.paintapp.extensions.toast
-import kotlinx.android.synthetic.main.activity_main.*
-import java.util.*
+import kotlinx.android.synthetic.main.activity_drawing.*
 
-class MainActivity : AppCompatActivity() {
+class DrawingActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-
+        setContentView(R.layout.activity_drawing)
 
         val metrics = DisplayMetrics()
         windowManager.defaultDisplay.getMetrics(metrics)

@@ -8,7 +8,6 @@ import android.text.TextUtils
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.TextView
-import com.pfariasmunoz.paintapp.MainActivity
 import com.pfariasmunoz.paintapp.R
 import com.pfariasmunoz.paintapp.home.HomeActivity
 import kotlinx.android.synthetic.main.activity_login.*
