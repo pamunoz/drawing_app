@@ -3,17 +3,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/btn_clear"
         android:text="@string/btn_clear"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_below="@id/btn_clear"
+        android:text="@string/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+
+
 
     <com.pfariasmunoz.paintapp.drawing.PaintView
         android:id="@+id/paintView"
+        android:layout_below="@id/btn_save"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </RelativeLayout>

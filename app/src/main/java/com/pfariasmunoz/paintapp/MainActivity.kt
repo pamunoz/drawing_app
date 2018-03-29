@@ -4,9 +4,9 @@ import android.os.Bundle
 import android.provider.MediaStore
 import android.support.v7.app.AppCompatActivity
 import android.util.DisplayMetrics
-import android.util.Log
 import android.view.MenuItem
-import android.widget.Toast
+import com.pfariasmunoz.paintapp.extensions.savePng
+import com.pfariasmunoz.paintapp.extensions.toast
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
@@ -17,12 +17,21 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+
         val metrics = DisplayMetrics()
         windowManager.defaultDisplay.getMetrics(metrics)
         paintView.init(metrics)
-        paintView.isDrawingCacheEnabled = true
         btn_clear.setOnClickListener({
             paintView.clear()
+        })
+        btn_save.setOnClickListener({
+            paintView.isDrawingCacheEnabled = true
+            val imgSave = savePng(paintView)
+            if (imgSave != null)
+                toast("Drawing saved to gallery")
+            else toast("oop´s image coud not be saved!")
+            paintView.destroyDrawingCache()
         })
     }
 
@@ -34,21 +43,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
         return true
-    }
-
-    override fun onPause() {
-        super.onPause()
-//        val imgSave: String = MediaStore.Images.Media.insertImage(contentResolver, paintView.drawingCache, "${UUID.randomUUID()}.png", "drawing")
-//
-//        if (imgSave != null) {
-//            Toast.makeText(this, "Drawing saved to Gallery", Toast.LENGTH_SHORT).show()
-//            Log.i("SAVED", "This image was saved")
-//        } else {
-//            Toast.makeText(this, "Ooops!, Image could not be saved", Toast.LENGTH_SHORT).show()
-//            Log.i("NOT SAVE", "THIS IMAGE WAS NOT SAVED")
-//        }
-//
-//        paintView.destroyDrawingCache()
     }
 
 }

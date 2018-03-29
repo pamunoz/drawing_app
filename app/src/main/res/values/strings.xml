@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">PaintApp</string>
     <string name="btn_clear">Clear</string>
+    <string name="btn_save">Save</string>
 </resources>
