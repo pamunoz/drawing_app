@@ -10,6 +10,7 @@ import android.view.inputmethod.EditorInfo
 import android.widget.TextView
 import com.pfariasmunoz.paintapp.MainActivity
 import com.pfariasmunoz.paintapp.R
+import com.pfariasmunoz.paintapp.home.HomeActivity
 import kotlinx.android.synthetic.main.activity_login.*
 
 /**
@@ -73,7 +74,7 @@ class LoginActivity : AppCompatActivity() {
             // form field with an error.
             focusView?.requestFocus()
         } else {
-            val intent: Intent = Intent(this, MainActivity::class.java)
+            val intent: Intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
 
 
