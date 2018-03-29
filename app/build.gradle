@@ -30,6 +30,11 @@ dependencies {
     implementation "com.android.support:appcompat-v7:$versions.support"
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     implementation "android.arch.persistence.room:runtime:1.0.0"
+
+    implementation "com.google.dagger:dagger:$versions.dagger"
+    kapt "com.google.dagger:dagger-compiler:$versions.dagger"
+    compileOnly 'org.glassfish:javax.annotation:10.0-b28'
+
     implementation 'com.android.support:design:27.1.0'
     kapt "android.arch.persistence.room:compiler:1.0.0"
 
