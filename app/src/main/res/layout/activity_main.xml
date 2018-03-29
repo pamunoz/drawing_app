@@ -22,9 +22,6 @@
         android:layout_height="wrap_content"
         />
 
-
-
-
     <com.pfariasmunoz.paintapp.drawing.PaintView
         android:id="@+id/paintView"
         android:layout_below="@id/btn_save"
