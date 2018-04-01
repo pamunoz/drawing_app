@@ -11,10 +11,10 @@ import android.arch.persistence.room.PrimaryKey
  * @param password password of the user
  * @param login login of the user
  */
-@Entity
+@Entity(tableName = "users")
 data class User(
         @PrimaryKey(autoGenerate = true)
-        var id: Long?,
+        @ColumnInfo(name = "entryId") var id: Long?,
         @ColumnInfo(name = "password") val password: String = "",
         @ColumnInfo(name = "login") var login: String = "")
 
@@ -25,7 +25,7 @@ data class User(
  * @param name name of the drawing
  * @param userId user id of the [User]
  */
-@Entity
+@Entity(tableName = "drawings")
 data class Drawing(
         @PrimaryKey(autoGenerate = true)
         var id: Long?,
