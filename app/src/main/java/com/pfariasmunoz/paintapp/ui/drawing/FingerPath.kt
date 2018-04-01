@@ -1,4 +1,4 @@
-package com.pfariasmunoz.paintapp.drawing
+package com.pfariasmunoz.paintapp.ui.drawing
 
 import android.graphics.Path
 

@@ -1,22 +1,12 @@
-package com.pfariasmunoz.paintapp.drawing
+package com.pfariasmunoz.paintapp.ui.drawing
 
-import android.content.ContentResolver
 import android.content.Context
 import android.graphics.*
-import android.os.Environment
 import android.util.AttributeSet
 import android.util.DisplayMetrics
-import android.util.Log
 import android.view.MotionEvent
 import android.view.View
-import com.pfariasmunoz.paintapp.extensions.toast
-import java.io.File
-import java.io.FileOutputStream
 import android.graphics.Bitmap
-import android.opengl.ETC1.getHeight
-import android.opengl.ETC1.getWidth
-
-
 
 
 class PaintView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null) :

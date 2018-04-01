@@ -1,4 +1,4 @@
-package com.pfariasmunoz.paintapp.drawing
+package com.pfariasmunoz.paintapp.ui.drawing
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity

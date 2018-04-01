@@ -1,4 +1,4 @@
-package com.pfariasmunoz.paintapp.userlist
+package com.pfariasmunoz.paintapp.ui.userlist
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle

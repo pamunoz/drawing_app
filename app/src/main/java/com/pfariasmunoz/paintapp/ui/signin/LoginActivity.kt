@@ -1,4 +1,4 @@
-package com.pfariasmunoz.paintapp.signin
+package com.pfariasmunoz.paintapp.ui.signin
 
 
 import android.content.Intent
@@ -9,7 +9,7 @@ import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.TextView
 import com.pfariasmunoz.paintapp.R
-import com.pfariasmunoz.paintapp.home.HomeActivity
+import com.pfariasmunoz.paintapp.ui.home.HomeActivity
 import kotlinx.android.synthetic.main.activity_login.*
 
 /**

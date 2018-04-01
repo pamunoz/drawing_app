@@ -4,7 +4,7 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".drawing.DrawingActivity">
+    tools:context=".ui.drawing.DrawingActivity">
 
     <Button
         android:id="@+id/btn_clear"
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         />
 
-    <com.pfariasmunoz.paintapp.drawing.PaintView
+    <com.pfariasmunoz.paintapp.ui.drawing.PaintView
         android:id="@+id/paintView"
         android:layout_below="@id/btn_save"
         android:layout_width="match_parent"

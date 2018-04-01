@@ -2,10 +2,12 @@
 
 buildscript {
     ext.versions = [
-            kotlin : '1.2.31',
-            anko : '0.10.4',
+            kotlin  : '1.2.31',
+            anko    : '0.10.4',
             support : '27.1.0',
-            dagger : '2.15'
+            dagger  : '2.15',
+            arch    : '1.0.0',
+            coroutines : '0.22.5'
     ]
     repositories {
         google()
