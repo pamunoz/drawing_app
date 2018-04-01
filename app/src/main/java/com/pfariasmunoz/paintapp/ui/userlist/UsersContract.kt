@@ -6,6 +6,7 @@ import com.pfariasmunoz.paintapp.data.User
 
 interface UsersContract {
     interface View : BaseView<Presenter>{
+        var isActive: Boolean
         fun setLoadingIndicator(active: Boolean)
         fun showUsers(users: List<User>)
         fun showLoadingUserError()
@@ -15,6 +16,5 @@ interface UsersContract {
 
     interface Presenter : BasePresenter {
         fun loadUsers(forceUpdate: Boolean)
-        fun addNewUser()
     }
 }
