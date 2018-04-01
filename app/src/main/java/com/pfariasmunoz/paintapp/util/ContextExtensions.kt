@@ -1,4 +1,4 @@
-package com.pfariasmunoz.paintapp.extensions
+package com.pfariasmunoz.paintapp.util
 
 import android.content.Context
 import android.provider.MediaStore

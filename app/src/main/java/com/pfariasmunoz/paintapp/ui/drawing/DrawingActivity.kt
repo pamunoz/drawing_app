@@ -5,8 +5,8 @@ import android.support.v7.app.AppCompatActivity
 import android.util.DisplayMetrics
 import android.view.MenuItem
 import com.pfariasmunoz.paintapp.R
-import com.pfariasmunoz.paintapp.extensions.savePng
-import com.pfariasmunoz.paintapp.extensions.toast
+import com.pfariasmunoz.paintapp.util.savePng
+import com.pfariasmunoz.paintapp.util.toast
 import kotlinx.android.synthetic.main.activity_drawing.*
 
 class DrawingActivity : AppCompatActivity() {

@@ -1,3 +1,5 @@
+package com.pfariasmunoz.paintapp.data.source
+
 import com.pfariasmunoz.paintapp.data.User
 import com.pfariasmunoz.paintapp.data.source.RemoteDataNotFoundException
 import com.pfariasmunoz.paintapp.data.source.Result
