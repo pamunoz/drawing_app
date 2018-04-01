@@ -8,6 +8,10 @@ import com.pfariasmunoz.paintapp.util.launchSilent
 import kotlinx.coroutines.experimental.android.UI
 import kotlin.coroutines.experimental.CoroutineContext
 
+/**
+ * Retrieves the data and updates the
+ * UI as required.
+ */
 class UsersPresenter(private val usersRepository: UsersRepository,
                      private val usersView: UsersContract.View,
                      private val uiContext: CoroutineContext = UI) : UsersContract.Presenter {
@@ -27,6 +31,11 @@ class UsersPresenter(private val usersRepository: UsersRepository,
         firstLoad = false
     }
 
+    /**
+     * @param forceUpdate   Pass in true to refresh the data in the [UsersDataSource]
+     * *
+     * @param showLoadingUI Pass in true to display a loading icon in the UI
+     */
     private fun loadUsers(forceUpdate: Boolean, showLoadingUI: Boolean) = launchSilent(uiContext) {
         if (showLoadingUI) {
             usersView.setLoadingIndicator(true)
